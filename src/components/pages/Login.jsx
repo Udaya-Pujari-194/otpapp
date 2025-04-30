@@ -45,9 +45,10 @@ function Login() {
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '100px' }}>
+    <div style={{ textAlign: 'center', marginTop: '100px' }} className=''>
       <form onSubmit={handleSubmit}>
         <input
+        className='border border-red-700'
           value={otp}
           onChange={(e) => setOtp(e.target.value)}
           placeholder="Enter OTP"
@@ -59,7 +60,7 @@ function Login() {
       </form>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {showResend && (
-        <button onClick={handleResend} style={{ marginTop: '10px', padding: '10px' }}>
+        <button className='' onClick={handleResend} style={{ marginTop: '10px', padding: '10px' }}>
           Resend OTP
         </button>
       )}
